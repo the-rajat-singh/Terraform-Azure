@@ -1,19 +1,17 @@
 variable "location" {
-
+  type = string
 }
 
 variable "env" {
-
+  type = string
 }
-
 
 variable "subnets" {
   type = map(string)
-
 }
 
 variable "vm_size" {
-
+  type = string
 }
 
 variable "os_image" {
@@ -36,10 +34,9 @@ variable "vm_count" {
 }
 
 variable "username" {
-
+  type = string
 }
 
 variable "password" {
-
+  type = string
 }
-
