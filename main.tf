@@ -6,7 +6,7 @@ module "resource_group" {
 
 }
 module "network" {
-  source    = "./modules/Network"
+  source    = "./modules/network"
   rg_name   = module.resource_group.rg_name
   location  = module.resource_group.location
   tags      = local.common_tags
