@@ -1,12 +1,9 @@
 terraform {
   backend "azurerm" {
-    resource_group_name  = "remote-rg"
-    storage_account_name = "remotestorageyofaqew5"
-    container_name       = "tfstate"
+    resource_group_name  = "storage_for_rajat"
+    storage_account_name = "storagetfstateviarajat"
+    container_name       = "terra"
     key                  = "terraform.tfstate"
-    subscription_id      = ""
-    tenant_id            = ""
-    client_id            = ""
-    client_secret        = ""
+ 
   }
 }
