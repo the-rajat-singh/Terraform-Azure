@@ -1,10 +1,12 @@
-provider "azurerm" {
-  features {
-
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~> 4.0"
+    }
   }
-  subscription_id = ""
-  tenant_id       = ""
-  client_id       = ""
-  client_secret   = ""
 }
 
+provider "azurerm" {
+  features {}
+}
