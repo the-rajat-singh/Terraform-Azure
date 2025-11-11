@@ -3,7 +3,7 @@ name: Terraform on Azure
 on:
   push:
     branches:
-      - "**"       
+      - "**"
   pull_request:
     branches:
       - main
@@ -27,21 +27,18 @@ jobs:
 
     - name: Terraform Init
       run: terraform init
-      working-directory: ./Terraform-Azure
 
     - name: Terraform Fmt
       run: terraform fmt -check
-      working-directory: ./Terraform-Azure
 
     - name: Terraform Validate
       run: terraform validate
-      working-directory: ./Terraform-Azure
 
     - name: Terraform Plan
       run: terraform plan -out=tfplan
-      working-directory: ./Terraform-Azure
 
     - name: Terraform Apply
       if: github.ref == 'refs/heads/main'
       run: terraform apply -auto-approve tfplan
+auto-approve tfplan
       working-directory: ./Terraform-Azure
